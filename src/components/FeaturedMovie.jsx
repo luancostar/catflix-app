@@ -24,7 +24,7 @@ export default ({item}) => {
         <div className="featured--vertical">
                <div className="featured--horizontal">
                 <div className="featured--name">
-                    {item.original_name}
+                    {item.title}
                 </div>
                 <div className="featured--info">
                     <div className="featured--points">
@@ -36,7 +36,7 @@ export default ({item}) => {
                 </div>
                     <div className="featured--description">{description}</div>
                     <div className="featured--buttons">
-                        <a className="featured--watchbutton" href="{`/watch/${item.id}`}">► Assistir</a>
+                        <a className="featured--watchbutton" target="_blank" href={`https://embedder.net/e/${item.id}`}>► Assistir</a>
                         <a className="featured--mylistbutton" href="">+ Minha Lista</a>
 
                     </div>

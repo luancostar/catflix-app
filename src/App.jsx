@@ -11,23 +11,32 @@ import Header from './components/Header';
     const [featuredData, setFeaturedData] = useState(null);
     const [blackHeader, setBlackHeader] = useState(false);
 
-  useEffect(() => {
-    const loadAll = async () => {
-      //pegando a lista TOTAL
-      let list = await Tmdb.getHomeList();
-      setMovieList(list);
-      
-      // pegando o fetuared
+  
 
-      let originals = list.filter(i => i.slug === 'originals');
-      let randomChosen = Math.floor(Math.random() * (originals[0].items.results.length - 1));
-      let chosen = originals[0].items.results[randomChosen];
-      let chosenInfo = await Tmdb.getMovieInfo(chosen.id, 'tv');
-      setFeaturedData(chosenInfo);
-    }
+ 
+    useEffect(() => {
+      const loadAll = async () => {
+          let list = await Tmdb.getHomeList();
+          setMovieList(list);
 
-    loadAll();
-  }, []);
+          // Escolher aleatoriamente um filme do MCU
+          let mcu = list.filter(i => i.slug === 'mcu');
+          let randomChosen = Math.floor(Math.random() * (mcu[0].items.results.length - 1));
+          let chosen = mcu[0].items.results[randomChosen];
+          
+          // Obter informações do filme escolhido
+          let chosenInfo = await Tmdb.getMovieInfo(chosen.id, 'movie');
+
+          // Certifique-se de que o título está sendo acessado corretamente
+          let title = chosenInfo.title || chosenInfo.name; // 'title' para filmes, 'name' para séries
+          setFeaturedData({ ...chosenInfo, title });
+      }
+
+      loadAll();
+    }, []);
+
+
+   
  
     useEffect(() =>{
       const scrollListener = () => {

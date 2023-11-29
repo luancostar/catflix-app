@@ -19,8 +19,8 @@
 }
 .featured--name{
     font-size: 60px;
-    /* font-weight: bold; */
-    font-family: 'Pacifico', cursive;
+    font-weight: bold;
+    font-family: 'Silkscreen', sans-serif;
     color: #DC1A28;
     filter: drop-shadow(2px 2px 3px black);
 
