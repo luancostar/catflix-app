@@ -13,8 +13,8 @@ background: transparent;
 transition: all ease 0.5s;
 }
 header.black {
-background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(130,9,204,1) 31%, rgba(69,0,112,1) 76%, rgba(36,3,69,1) 100%);
+background: rgb(68,0,0);
+background: linear-gradient(90deg, rgba(68,0,0,1) 0%, rgba(216,0,0,1) 33%, rgba(255,0,0,1) 65%, rgba(153,0,0,1) 81%);
 }
 .header--user img {
 height: 100%;

@@ -34,10 +34,7 @@ import Header from './components/Header';
 
       loadAll();
     }, []);
-
-
-   
- 
+  
     useEffect(() =>{
       const scrollListener = () => {
         if(window.scrollY > 10) {

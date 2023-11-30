@@ -4,12 +4,12 @@
 .featured--vertical{
     width: inherit;
     height: inherit;
-    background: linear-gradient(to top, rgba(115,3,184,1) 10%, transparent 90%);
+    background: linear-gradient(to top, rgb(255 0 0 / 80%) 10%, transparent 90%);
 }
 .featured--horizontal{
     width: inherit;
     height: inherit;
-    background: linear-gradient(to right, rgba(115,3,184,1) 30%, transparent 70%);
+    background: linear-gradient(to right, rgb(255 0 0 / 80%) 30%, transparent 70%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,7 +21,7 @@
     font-size: 60px;
     font-weight: bold;
     font-family: 'Silkscreen', sans-serif;
-    color: #DC1A28;
+    color: #fff;
     filter: drop-shadow(2px 2px 3px black);
 
 }
